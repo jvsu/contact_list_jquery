@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Contact Card</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="cl.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(document).on('click','#new_contact',function(){
+			var first_name = $("input[name='first_name']").val();
+			var last_name = $("input[name='last_name']").val();
+			var email = $("input[name='email']").val();
+			var contact = $("input[name='contact']").val();
+
+			$("tbody").append("<tr><td>"+first_name+"</td><td>"+last_name+"</td><td>"+email+"</td><td>"+contact+"</td></tr>");
+			return false;
+		});
+	});
+
+	</script>
+
+</head>
+<body>
+<div id='info'>
+	<h3>Enter Contact Information</h3>
+	<form>
+		First Name<input type='text' name='first_name'>
+		Last Name <input type='text' name='last_name'>
+		Email Address <input type='text' name='email'>
+		Contact <input type='text' name='contact'>
+		<input type='submit' value='Submit' id='new_contact'>
+	</form>
+</div>
+	<div id='contact_info'>
+		<table border="1" cellspacing='5' cellpadding='5'>
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Adress</th>
+					<th>Contact</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
